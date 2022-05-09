@@ -1,4 +1,6 @@
-.button-container {
+import styled from "styled-components";
+
+export const ButtonStyled = styled.button`
   min-width: 165px;
   width: auto;
   height: 50px;
@@ -22,7 +24,7 @@
     border: 1px solid black;
   }
 
-  &.google-sign-in {
+  &.google {
     background-color: #4285f4;
     color: white;
 
@@ -43,4 +45,4 @@
       border: none;
     }
   }
-}
+`;

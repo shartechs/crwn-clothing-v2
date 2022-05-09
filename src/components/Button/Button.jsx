@@ -1,19 +1,19 @@
-import React from "react";
-import "./Button.styles.scss";
-
-const BUTTON_TYPE_CLASSES = {
-  google: "google-sign-in",
+import { ButtonStyled } from "./Button.styled";
+export const BUTTON_TYPE_CLASSES = {
+  google: "google",
   inverted: "inverted",
 };
 
-function Button({ children, buttonType, ...otherProps }) {
+function Button({ children, className, ...otherProps }) {
   return (
-    <button
-      className={`button-container ${BUTTON_TYPE_CLASSES[buttonType]}`}
+    <ButtonStyled
+      className={`${
+        BUTTON_TYPE_CLASSES[className] ? BUTTON_TYPE_CLASSES[className] : ""
+      }`}
       {...otherProps}
     >
       {children}
-    </button>
+    </ButtonStyled>
   );
 }
 
